@@ -10,7 +10,7 @@ Current support:
 - Extract an archive
 
 How to use
-=========
+---------
 
 Include the zip class to your php file and create an object variable to use it like:
 
