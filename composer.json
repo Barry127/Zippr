@@ -1,6 +1,7 @@
 {
     "name": "barry127/zippr",
     "description": "Class to handle zip files",
+    "version": "1.0.0",
     "keywords": ["zip", "extract", "archive"],
     "homepage": "https://github.com/Barry127/Zippr",
     "license": "MIT",
@@ -10,6 +11,10 @@
             "email": "kleijn.barry@gmail.com"
         }
     ],
+    "support": {
+        "email": "kleijn.barry@gmail.com",
+        "issues": "https://github.com/Barry127/Zippr/issues"
+    },
     "require": {
         "php": ">=5.3.0"
     },
@@ -18,5 +23,11 @@
             "Barry127\\Zippr": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Barry127/Zippr"
+        }
+    ]
 }
