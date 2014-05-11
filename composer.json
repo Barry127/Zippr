@@ -1,0 +1,22 @@
+{
+    "name": "barry127/zippr",
+    "description": "Class to handle zip files",
+    "keywords": ["zip", "extract", "archive"],
+    "homepage": "https://github.com/Barry127/Zippr",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Barry de Kleijn",
+            "email": "kleijn.barry@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Barry127\\Zippr": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
