@@ -7,14 +7,14 @@
  * @license 	MIT License
  * @license 	http://opensource.org/licenses/MIT MIT License
  *
- * @version     1.0
+ * @version     1.0.0
  */
 
 namespace Barry127\Zippr;
 
 class Zippr
 {
-	const 	VERSION 	= '1.0';
+	const 	VERSION 	= '1.0.0';
 
 	/**
 	 * Name of the zip file
