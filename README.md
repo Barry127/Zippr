@@ -22,3 +22,11 @@ This major update has the following updates
 - Bug fixes on addDir method
 - extractArchive has become a static function
 - Dependencies are checked in a seperate method
+
+
+INSTALL
+------
+
+Add the next line to the require section in your composer.json file
+
+    "barry127/zippr": "1.*"

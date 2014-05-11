@@ -4,8 +4,8 @@
  * 
  * @author      Barry de Kleijn
  * @copyright   Barry de Kleijn
- * @license 	MIT License
- * @license 	http://opensource.org/licenses/MIT MIT License
+ * @license 	MIT
+ * @license 	http://opensource.org/licenses/MIT MIT
  *
  * @version     1.0.0
  */
@@ -14,6 +14,11 @@ namespace Barry127\Zippr;
 
 class Zippr
 {
+    /**
+     * Zippr version
+     *
+     * @var string
+     */
 	const 	VERSION 	= '1.0.0';
 
 	/**
@@ -35,6 +40,8 @@ class Zippr
 	 * Zippr constructor
 	 *
 	 * @param 	string 	$name
+     * 
+     * @return  void
 	 */
 	public function __construct($name = null)
 	{
@@ -56,6 +63,10 @@ class Zippr
 
 	/**
 	 * Zippr destructor
+     * 
+     * Zippr automatically closes the zip file at destruct so it can be downloaded by the client.
+     * 
+     * @return  void
 	 */
 	public function __destruct() {
 		$this->zip->close();
@@ -63,6 +74,8 @@ class Zippr
 
 	/**
 	 * Check for class dependencies
+     * 
+     * @return  void
 	 */
 	private function checkDependencies()
 	{
@@ -78,8 +91,10 @@ class Zippr
 	/**
 	 * Add directory to zip archive
 	 *
-	 * @param 	string 	$dir
-	 * @param 	string 	$location
+	 * @param 	string 	$dir        Directory to add to archive
+	 * @param 	string 	$location   Location in archive
+     * 
+     * return   void
 	 */
 	public function addDir($dir, $location = null)
 	{
@@ -104,8 +119,10 @@ class Zippr
 	/**
 	 * Add file to zip archive
 	 * 
-	 * @param 	string 	$file
-	 * @param 	string 	$location
+	 * @param 	string 	$file       File to add to archive
+	 * @param 	string 	$location   Location in archive
+     * 
+     * @return  void
 	 */
 	public function addFile($file, $location = null)
 	{
@@ -122,8 +139,10 @@ class Zippr
 	/**
 	 * Extract zip archive
 	 *
-	 * @param 	string 	$archive
-	 * @param 	string 	$location
+	 * @param 	string 	$archive    Archive to extract
+	 * @param 	string 	$location   Location to extract to
+     * 
+     * @return  void
 	 */
 	public static function extractArchive($archive, $location = null)
 	{
@@ -150,7 +169,9 @@ class Zippr
 	/**
 	 * Set archive comment
 	 *
-	 * @param 	string 	$comment
+	 * @param 	string 	$comment    Comment for archive
+     * 
+     * @return  void
 	 */
 	public function setComment($comment) {
 		$this->zip->setArchiveComment($comment);
@@ -158,6 +179,8 @@ class Zippr
 
 	/**
 	 * Get class version
+     * 
+     * @return  string  Zippr version
 	 */
 	public function getVersion() {
 		return self::VERSION;
