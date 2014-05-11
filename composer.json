@@ -18,5 +18,5 @@
             "Barry127\\Zippr": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
