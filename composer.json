@@ -1,7 +1,7 @@
 {
     "name": "barry127/zippr",
     "description": "Class to handle zip files",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": ["zip", "extract", "archive"],
     "homepage": "https://github.com/Barry127/Zippr",
     "license": "MIT",

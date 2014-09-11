@@ -4,10 +4,10 @@
  * 
  * @author      Barry de Kleijn
  * @copyright   Barry de Kleijn
- * @license 	MIT
- * @license 	http://opensource.org/licenses/MIT MIT
+ * @license 	MIT License
+ * @license 	http://opensource.org/licenses/MIT
  *
- * @version     1.0.0
+ * @version     1.0.1
  */
 
 namespace Barry127\Zippr;
@@ -19,7 +19,7 @@ class Zippr
      *
      * @var string
      */
-	const 	VERSION 	= '1.0.0';
+	const 	VERSION 	= '1.0.1';
 
 	/**
 	 * Name of the zip file
@@ -146,7 +146,13 @@ class Zippr
 	 */
 	public static function extractArchive($archive, $location = null)
 	{
-		Zippr::checkDependencies();
+		if(version_compare(PHP_VERSION, '5.3.0', '<')) {
+			throw new \Exception('Zippr requires PHP 5.3.0 or higher.', 0);
+		}
+
+		if(!class_exists('ZipArchive')) {
+			throw new \Exception("Could not construct zip file: Missing library ZipArchive.", 0);
+		}
 
 		if(!file_exists($archive) || strtolower(substr($archive, -4)) != '.zip') {
 			throw new \Exception("Invalid Archive", 2);
