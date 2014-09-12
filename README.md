@@ -9,6 +9,8 @@ Current support:
 - Add comment to archive
 - Extract an archive
 
+Complete documentation can be found at [zippr.barrydekleijn.nl](http://zippr.barrydekleijn.nl)
+
 
 UPDATED
 -------
